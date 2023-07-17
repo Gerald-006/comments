@@ -1,0 +1,166 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Interactive Comments Section</title>
+</head>
+
+<body>
+
+    <div id="comments" >
+        
+        <div id="text-wrapper" class="pt-2">
+
+          <div id="comment-info">
+            <div id="first-info">
+              <img src="./image-amyrobson.png" :alt="comment.user.username">
+              <h6 class="m-0"><b>amyrobson</b></h6>
+              <span>1 month ago</span>
+            </div>
+
+            <div id="second-info">
+              <img src="./icon-reply.svg" alt="reply">
+              <p class="m-0">Reply</p>
+            </div>
+            
+          </div>
+
+          <div id="comment-text" class="pt-2">
+            <p>Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You've nailed the design and the responsiveness at various breakpoints works really well.</p>
+          </div>
+
+        </div>
+    </div>
+
+    <!-- popup that appears when reply is clicked -->
+    <div id="reply-popup">
+
+        <div id="reply-wrapper" class="pt-2">
+
+        <form id="myreplyform">
+            <textarea name="replyinput" id="replyinput" cols="30" rows="10">
+
+            </textarea>
+
+            <button>REPLY</button>
+        </form>
+
+        </div>
+    </div>
+
+
+    <div id="comments" >
+        
+        <div id="text-wrapper" class="pt-2">
+
+          <div id="comment-info">
+            <div id="first-info">
+              <img src="./image-maxblagun.png">
+              <h6 class="m-0"><b>maxblagun</b></h6>
+              <span>2 week ago</span>
+            </div>
+
+            <div id="second-info">
+              <img src="./icon-reply.svg" alt="reply">
+              <p class="m-0">Reply</p>
+            </div>
+            
+          </div>
+
+          <div id="comment-text">
+            <p>Woah, your project looks awesome! How long have you been coding for? I'm still new, but think I want to dive into React as well soon. Perhaps you can give me an insight on where I can learn React? Thanks!</p>
+          </div>
+
+        </div>
+    </div>
+
+        <!-- popup that appears when reply is clicked -->
+        <div id="reply-popup">
+
+            <div id="reply-wrapper" class="pt-2">
+    
+            <form id="myreplyform">
+                <textarea name="replyinput" id="replyinput" cols="30" rows="10">
+    
+                </textarea>
+    
+                <button>REPLY</button>
+            </form>
+    
+            </div>
+        </div>
+
+
+    <div id="reply">
+
+        <div id="text-wrapper" class="pt-2">
+
+        <div id="comment-info">
+            <div id="first-info">
+            <img src="./image-ramsesmiron.png" alt="ramsemiron">
+            <h6 ><b>ramsemiron</b></h6>
+            <span>1 week ago</span>
+            </div>
+
+            <div id="second-info">
+            <img src="./icon-reply.svg" alt="reply">
+            <p class="">Reply</p>
+            </div>
+        </div>
+
+        <div id="comment-text" class="pt-2">
+            <p><b>@maxblagun</b> If you're still new, I'd recommend focusing on the fundamentals of HTML, CSS, and JS before considering React. It's very tempting to jump ahead but lay a solid foundation first.</p>
+        </div>
+
+        </div>
+    </div>
+
+    <div id="reply">
+
+        <div id="text-wrapper">
+
+        <div id="comment-info">
+            <div id="first-info">
+            <img src="./image-juliusomo.png" alt="ramsemiron">
+            <h6 ><b>juliusomo</b></h6>
+            <span>2 week ago</span>
+            </div>
+
+            <div id="second-info">
+            
+            <span id="delete" >
+                <img src="./icon-delete.svg" alt="reply">
+                Delete
+            </span>
+
+
+            <span id="edit" >
+                <img src="./icon-edit.svg" alt="reply">
+                Edit
+            </span>
+
+            </div>
+        </div>
+
+        <div id="comment-text" class="pt-2">
+            <p><b>@ramsemiron</b> I couldn't agree more with this. Everything moves so fast and it always seems like everyone knows the newest library/framework. But the fundamentals are what stay constant.</p>
+        </div>
+
+        </div>
+    </div>
+    
+
+    <div class="comment-section">
+      <h2>Leave a comment</h2>
+      <form action="#" method="post">
+        <label for="comment">Comment:</label>
+        <textarea id="comment" name="comment" required></textarea>
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+    <script src="app.js"></script>
+
+
+</body>
+</html>

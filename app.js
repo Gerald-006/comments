@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <div id="first-info">
           <img src="./image-juliusomo.png" :alt="comment.user.username" />
           <h6 class="m-0"><b>amyrobson</b></h6>
-          <span>1 month ago</span>
+          <span>${message.timestamp}</span>
         </div>
 
         <div id="second-info">
@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", function () {
       <div id="first-info">
         <img src="./image-juliusomo.png" alt="ramsemiron" />
         <h6><b>juliusomo</b></h6>
-        <span>2 week ago</span>
+        <span>${replytext.timestamp}</span>
       </div>
 
       <div id="second-info">
@@ -179,20 +179,24 @@ document.addEventListener("DOMContentLoaded", function () {
       // gets input value and appends comment
       const comment = (e) => {
         e.preventDefault();
-
+        const timestamp= new Date().toLocaleString('en-US',{hour:'numeric',minute:'numeric',hour12:true});
         const message = {
           text: commentInput.value,
+          timestamp: timestamp
         };
         juliusComment.innerHTML += createNewComment(message);
         commentInput.value = "";
+        
       };
 
       //gets input value and appends reply
       const replyAppend = (e) => {
         e.preventDefault();
-
+        const timestamp= new Date().toLocaleString('en-US',{hour:'numeric',minute:'numeric',hour12:true});
         const replytext = {
           reply: replyInput.value,
+          timestamp: timestamp
+
         };
         if (selectedButton === "amy") {
           replyToAmy.innerHTML += createNewReply(replytext);

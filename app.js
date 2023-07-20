@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
   fetch("http://localhost:3000/comments")
     .then((response) => response.json())
     .then((data) => {
-      const comments = data;
+      const comments = data.comments;
 
       //amy append
       const appendFromAmy = (data) => `
